@@ -1,0 +1,35 @@
+\documentclass[10pt,a4paper,hidelinks]{article}
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage[nochapters]{classicthesis} % nochapters
+
+\begin{document}
+    \pagestyle{plain}
+    \title{\rmfamily\normalfont\spacedallcaps{Microbial Fuel Cell}}
+    \author{\spacedlowsmallcaps{Eko J. Salim \& Gerraldo S. Candra}}
+    \date{} % no date
+    
+    \maketitle
+    
+    \begin{abstract}
+        \noindent\lipsum[1] Just a test.\footnote{This is a footnote.}
+    \end{abstract}
+       
+    \tableofcontents
+    
+    \section{A Section}
+    \finalVersionString \lipsum[1]
+    \subsection{A Subsection}
+    \lipsum[1]
+    \subsection{A Subsection}
+    
+    \section{A Section}
+    \lipsum[1]
+    
+    % Bibliography
+    \nocite{*}
+    \addtocontents{toc}{\protect\vspace{\beforebibskip}}
+    \addcontentsline{toc}{section}{\refname}    
+    \bibliographystyle{plain}
+    \bibliography{Bibliography}
+\end{document}
