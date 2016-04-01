@@ -9,12 +9,14 @@
 \selectbiblanguage{bahasa}
 \setbtxfallbacklanguage{bahasa}
 \usepackage{mhchem}
+\usepackage{standalone}
 \usepackage{flowchart}
 \usepackage{tikz}
+\usepackage{pgfgantt}
 \usetikzlibrary{arrows,calc,positioning}
 
 %TikZ
-\tikzstyle{intt}=[draw,text centered,minimum size=6em,text width=5.25cm,text height=0.34cm]
+\tikzstyle{intt}=[draw,text cenStered,minimum size=6em,text width=5.25cm,text height=0.34cm]
 \tikzstyle{intl}=[draw,text centered,minimum size=2em,text width=2.75cm,text height=0.34cm]
 \tikzstyle{int}=[draw,minimum size=2.5em,text centered,text width=3.5cm]
 \tikzstyle{intg}=[draw,minimum size=3em,text centered,text width=6.cm]
@@ -31,7 +33,7 @@
     
     \begin{abstract}
     	\noindent Proses pengolahan limbah air sekarang meninggalkan banyak ruang untuk dikembangkan dan ditingkatkan. Limbah dapat menjadi sumber energi yang berharga --- sekitar 9 kali lebih banyak energi terkandung dalam limbah dibandingkan dengan energi yang diperlukan untuk mengolahnya dengan cara modern. Proses-proses yang tersedia sekerang jarang mempertimbangkan dan menggunakan hal ini, proses-proses ini juga sering tidak efisien dan 'kotor'.
-Menggabungkan teknologi-teknologi pengolahan limbah menjadi sebuah proses hibrida berpusat pada Microbial Fuel Cell (MFC) dapat memecahkan masalah ini.
+Menggabungkan teknologi-teknologi pengolahan limbah menjadi sebuah proses hibrida berpusat pada Microbial Fuel Cell (MFC) dapat memecahkan masalah ini. Keuntungan yang didapat dalam menggunakan proses hibrida ini diantara lain adalah berikut: ekstraksi sumber daya, ekstraksi energi (listrik) yang lebih besar dan efisien dan pembersihan limbah yang lebih bersih.
        % \noindent Current wastewater treatment processes and technologies left much to be desired. Wastewater could be a valuable source of energy --- about 9 times more energy are in wastewater compared to the energy needed to proccess them in a modern plant. Present processes do not generally take this into account moreover, they are also generally inefficient and 'unclean'. Combining present technologies, such as and especially Microbial Fuel Cell (MFC) could help alleviate these present issues considering wastewater treatment. 
     \end{abstract}
        
@@ -166,17 +168,63 @@ Pecernaan anaerobik sudah dibuktikan dapat mengolah limbah intensitas tinggi, sa
     \subsection{Jenis dan Pendekatan Penelitian}
     Pendekatan yang akan digunakan adalah pendekatan secara kuantitatif dan jenis penelitian adalah penelitian berbasis eksperimen.
     \subsection{Waktu dan Tempat Penelitian}
-    Penelitian akan dilakukan di area sekitar SMP Narada di Kosambi, Kecamatan Cengkareng, Jakarta Barat. Waktu penelitian adalh sekitar 2 bulan.
-    \subsection{Teknik Pengumpulan Data}
-    Teknik yang akan digunakan adalah eksperimen. Data juga kaan didapat dari berbagai sumber artikel penelitian.
-    
-    \subsection{Instrumen Penelitian}
+    Estimasi waktu penelitian adalah 6 bulan.\\
+
+    \begin{tikzpicture}[x=.5cm, y=1cm]
+    \begin{ganttchart}{1}{12}
+\gantttitle{2016}{12} \\
+\gantttitlelist{1,...,6}{2}\\
+\ganttgroup{Lama Penelitian}{2}{11} \\
+ %%%%%%%%%%%%%%%%%Phase-1
+\ganttbar{Pembuatan proposal}{2}{2} \\
+\ganttlinkedbar{Pengumpulan data \& Bimbingan}{4}{10} \\
+\ganttlinkedbar{Pembuatan prototype}{4}{10} \\
+\ganttlinkedbar{Penyusunan Laporan}{11}{11} \ganttnewline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{ganttchart}  
+\end{tikzpicture} 
+    \\Tempat penelitian mencangkup:
     \begin{itemize}
-    \item Microbial Fuel Cell
-    \item Sampel air limbah
-    \item Mikroalga
+    \item Instalasi Pengolahan Air Kotor (IPAK) Rawa Buaya, Cengkareng
+    \item Fasilitas pengolahan limbah RS Siloam, Kebon Jeruk
+    \item Fasilitas pengolahn limbah RS Puri, Puri Kembangan
+    \item \textit{Centralized Treatment Plant} Lippo Karawaci
+ 	\item SMP Narada
     \end{itemize}
     
+    \subsection{Teknik Pengumpulan Data}
+    Teknik yang akan digunakan adalah eksperimen. Data juga akan didapat dari berbagai sumber artikel penelitian. Data yang diambil diantara lain adalah:
+    \begin{itemize}
+    \item COD \& BOD hasil dari sebuah proses pengolahan dan proses keseluruhan
+    \item (Jumlah) Energi hasil proses \textit{Microbial Fuel Cell}
+    \item Jumlah \textit{Struvite}(\ce{NH4MgPO4.6H2O}) yang terproduksi
+    \item Jumlah gas metana yang terproduksi
+    \item Rangkaian proses pengolahan
+    \end{itemize}
+    \subsection{Instrumen Penelitian}
+    \begin{itemize}
+    \item Unit Microbial Fuel Cell
+    \item Kultur Mikroalga
+    \item Reaktor \textit{Anaerobic Digestion}
+    \item Sampel air limbah
+    \end{itemize}
+    \section{Foto Kunjungan}
+    \begin{figure}[!ht]
+	  \centering
+		  \includegraphics[width=\textwidth]{gfx/a1}
+	\end{figure}
+    \begin{figure}[!ht]
+	  \centering
+		  \includegraphics[width=\textwidth]{gfx/a2}
+	\end{figure}	
+    \begin{figure}[!ht]
+	  \centering
+		  \includegraphics[width=\textwidth]{gfx/a3}
+	\end{figure}    \begin{figure}[!ht]
+	  \centering
+		  \includegraphics[width=\textwidth]{gfx/a4}
+	\end{figure}	
     % Bibliography
     \nocite{*}
     \addtocontents{toc}{\protect\vspace{\beforebibskip}}
